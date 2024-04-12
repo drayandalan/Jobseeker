@@ -1,0 +1,22 @@
+{
+  "database": "my_database",
+  "collection": "user",
+  "indexes": [
+    {
+      "name": "active_token_1",
+      "key": {
+        "active_token": 1
+      },
+      "unique": true,
+      "sparse": true
+    },
+    {
+      "name": "username_1",
+      "key": {
+        "username": 1
+      },
+      "unique": true,
+      "sparse": true
+    }
+  ]
+}

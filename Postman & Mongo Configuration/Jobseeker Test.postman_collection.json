@@ -1,0 +1,3777 @@
+{
+	"info": {
+		"_postman_id": "d1d693cd-35da-4920-b00c-46d193fcc916",
+		"name": "Jobseeker Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18121091"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"messi777\",\r\n    \"password\": \"messi777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 22:49:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Registarasi berhasil.\"\n}"
+						},
+						{
+							"name": "Register User Gagal",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 22:50:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Username & password tidak boleh kosong.\"\n}"
+						},
+						{
+							"name": "Register User Duplicate Username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 22:52:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Registrasi gagal.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/generateToken",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"generateToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Generate Token Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/generateToken",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"generateToken"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 22:53:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4NzYwMzgsImV4cCI6MTcxMjk2MjQzOH0.9HWfZ-RQwMAlaC6qjNGM9frnPNloGB1GsQpmhKPNWoo\"\n}"
+						},
+						{
+							"name": "Generate Token Invalid Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"77777\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/generateToken",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"generateToken"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 22:54:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Invalid credentials"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4NzYyMDYsImV4cCI6MTcxMjk2MjYwNn0.gD-hgdtb_NIFZnEgqvxoYeYeXLQ_pDHKWyopmnXCg3I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"77777\",\r\n    \"newPassword\": \"88888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"updateUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\",\r\n    \"newPassword\": \"77777\",\r\n    \"newEmail\": \"ray@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 23:00:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully updated password & email.\"\n}"
+						},
+						{
+							"name": "Update User Invalid Credential",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4NzYyMDYsImV4cCI6MTcxMjk2MjYwNn0.gD-hgdtb_NIFZnEgqvxoYeYeXLQ_pDHKWyopmnXCg3I",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\",\r\n    \"newPassword\": \"88888\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateUser",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 23:08:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to update data user.\"\n}"
+						},
+						{
+							"name": "Update User Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"ray777\",\r\n    \"password\": \"12345\",\r\n    \"newPassword\": \"88888\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateUser",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateUser"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 03:01:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4NzYyMDYsImV4cCI6MTcxMjk2MjYwNn0.gD-hgdtb_NIFZnEgqvxoYeYeXLQ_pDHKWyopmnXCg3I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"messi777\",\r\n    \"password\": \"messi777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/deleteUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"deleteUser"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User Invalid Crendetial",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4NzYyMDYsImV4cCI6MTcxMjk2MjYwNn0.gD-hgdtb_NIFZnEgqvxoYeYeXLQ_pDHKWyopmnXCg3I",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"messi777\",\r\n    \"password\": \"messi888\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteUser",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteUser"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Apr 2024 23:11:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to delete user.\"\n}"
+						},
+						{
+							"name": "Delete User Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"messi777\",\r\n    \"password\": \"messi777\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteUser",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteUser"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 03:02:36 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/findAll?collection=candidate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "collection",
+									"value": "candidate"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find All Candidate",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/findAll?collection=candidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"findAll"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:25:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b37b54c4f03003b63158\",\n        \"candidateId\": 1,\n        \"fullName\": \"Fawaid Syamsul Arifin\",\n        \"dob\": \"2001-04-11\",\n        \"gender\": \"Male\"\n    },\n    {\n        \"id\": \"6618b3a154c4f03003b63159\",\n        \"candidateId\": 2,\n        \"fullName\": \"Agusbudi Purnomo\",\n        \"dob\": \"1977-08-05\",\n        \"gender\": \"Male\"\n    },\n    {\n        \"id\": \"6618b3f654c4f03003b6315b\",\n        \"candidateId\": 3,\n        \"fullName\": \"Johan Lolong\",\n        \"dob\": \"1977-08-05\",\n        \"gender\": \"Male\"\n    }\n]"
+						},
+						{
+							"name": "Find All Candidate Apply",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/findAll?collection=candidate_apply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"findAll"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate_apply"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:25:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b6f80da99e3c56a8c4b7\",\n        \"applyId\": 1,\n        \"candidateId\": 1,\n        \"vacancyId\": 1,\n        \"applyDate\": \"2024-04-12\",\n        \"createdDate\": \"2024-04-12 11:22:16\"\n    },\n    {\n        \"id\": \"6618b73d0da99e3c56a8c4b9\",\n        \"applyId\": 2,\n        \"candidateId\": 2,\n        \"vacancyId\": 2,\n        \"applyDate\": \"2024-04-12\",\n        \"createdDate\": \"2024-04-12 11:23:25\"\n    }\n]"
+						},
+						{
+							"name": "Find All Vacancy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/findAll?collection=vacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"findAll"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "vacancy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:25:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b52054c4f03003b6315c\",\n        \"vacancyId\": 1,\n        \"vacancyName\": \"UI/UX Designer (UI/UX Desain)\",\n        \"minAge\": 0,\n        \"maxAge\": 0,\n        \"requirementGender\": \"Male\",\n        \"createdDate\": \"2024-04-12 11:14:24\",\n        \"expiredDate\": \"2023-06-28\"\n    },\n    {\n        \"id\": \"6618b65b0da99e3c56a8c4b6\",\n        \"vacancyId\": 2,\n        \"vacancyName\": \"Mobile Apps Development Manager\",\n        \"minAge\": 27,\n        \"maxAge\": 35,\n        \"requirementGender\": \"All\",\n        \"createdDate\": \"2024-04-12 11:19:39\",\n        \"expiredDate\": \"2023-06-16\"\n    }\n]"
+						},
+						{
+							"name": "Find All Unknown Collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/findAll?collection=user",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"findAll"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:26:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Get Data Filter",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"keyword\": \"UI/UX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/getDataFilter?collection=vacancy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"getDataFilter"
+							],
+							"query": [
+								{
+									"key": "collection",
+									"value": "vacancy"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data Filter Candidate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keyword\": \"Male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/getDataFilter?collection=candidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"getDataFilter"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:29:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b3a154c4f03003b63159\",\n        \"candidateId\": 2,\n        \"fullName\": \"Agusbudi Purnomo\",\n        \"dob\": \"1977-08-05\",\n        \"gender\": \"Male\"\n    },\n    {\n        \"id\": \"6618b37b54c4f03003b63158\",\n        \"candidateId\": 1,\n        \"fullName\": \"Fawaid Syamsul Arifin\",\n        \"dob\": \"2001-04-11\",\n        \"gender\": \"Male\"\n    },\n    {\n        \"id\": \"6618b3f654c4f03003b6315b\",\n        \"candidateId\": 3,\n        \"fullName\": \"Johan Lolong\",\n        \"dob\": \"1977-08-05\",\n        \"gender\": \"Male\"\n    }\n]"
+						},
+						{
+							"name": "Get Data Filter Vacancy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keyword\": \"UI/UX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/getDataFilter?collection=vacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"getDataFilter"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "vacancy"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:29:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b52054c4f03003b6315c\",\n        \"vacancyId\": 1,\n        \"vacancyName\": \"UI/UX Designer (UI/UX Desain)\",\n        \"minAge\": 0,\n        \"maxAge\": 0,\n        \"requirementGender\": \"Male\",\n        \"createdDate\": \"2024-04-12 11:14:24\",\n        \"expiredDate\": \"2023-06-28\"\n    }\n]"
+						},
+						{
+							"name": "Get Data Filter Candidate Apply",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vacancyId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/getDataFilter?collection=candidate_apply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"getDataFilter"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate_apply"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:31:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6618b73d0da99e3c56a8c4b9\",\n        \"applyId\": 2,\n        \"candidateId\": 2,\n        \"vacancyId\": 2,\n        \"applyDate\": \"2024-04-12\",\n        \"createdDate\": \"2024-04-12 11:23:25\"\n    }\n]"
+						},
+						{
+							"name": "Get Data Filter Unknown Collection",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"keyword\": \"UI/UX\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/getDataFilter?collection=user",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"getDataFilter"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "user"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:32:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Add Candidate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"candidateId\": 3,\r\n    \"fullName\": \"Johan Lolong\",\r\n    \"dob\": \"1977-08-05\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/addCandidate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"addCandidate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Candidate Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"candidateId\": 2,\r\n    \"fullName\": \"Agusbudi Purnomo\",\r\n    \"dob\": \"1977-08-05\",\r\n    \"gender\": \"Male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addCandidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addCandidate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:08:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully added candidate data.\"\n}"
+						},
+						{
+							"name": "Add Candidate Failed Duplicate Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"candidateId\": 3,\r\n    \"fullName\": \"Agusbudi Purnomo\",\r\n    \"dob\": \"1977-08-05\",\r\n    \"gender\": \"Male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addCandidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addCandidate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:08:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to add candidate data.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Vacancy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vacancyId\": 2,\r\n    \"vacancyName\": \"Mobile Apps Development Manager\",\r\n    \"minAge\": 27,\r\n    \"maxAge\": 35,\r\n    \"requirementGender\": \"All\",\r\n    \"expiredDate\": \"2023-06-16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/addVacancy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"addVacancy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Vacancy Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vacancyId\": 1,\r\n    \"vacancyName\": \"UI/UX Designer (UI/UX Desain)\",\r\n    \"minAge\": 0,\r\n    \"maxAge\": 0,\r\n    \"requirementGender\": \"Male\",\r\n    \"expiredDate\": \"2023-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addVacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addVacancy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:14:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully added vacancy data.\"\n}"
+						},
+						{
+							"name": "Add Vacancy Failed Data Duplicate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vacancyId\": 2,\r\n    \"vacancyName\": \"UI/UX Designer (UI/UX Desain)\",\r\n    \"minAge\": 0,\r\n    \"maxAge\": 0,\r\n    \"requirementGender\": \"Male\",\r\n    \"expiredDate\": \"2023-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addVacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addVacancy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:18:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to add vacancy data.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Candidate Apply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"applyId\": 2,\r\n    \"candidateId\": 2,\r\n    \"vacancyId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/addCandidateApply",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"addCandidateApply"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Candidate Apply Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"applyId\": 1,\r\n    \"candidateId\": 1,\r\n    \"vacancyId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addCandidateApply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addCandidateApply"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:22:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully added candidate_apply data.\"\n}"
+						},
+						{
+							"name": "Add Candidate Apply Duplicate Apply Id",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"applyId\": 1,\r\n    \"candidateId\": 2,\r\n    \"vacancyId\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/addCandidateApply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"addCandidateApply"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:22:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to add candidate_apply data.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Candidate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"candidateId\": 3,\r\n    \"fullName\": \"Johan Super\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/updateCandidate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"updateCandidate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Candidate Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"candidateId\": 3,\r\n    \"fullName\": \"Johan Messi\",\r\n    \"dob\": \"1990-08-05\",\r\n    \"gender\": \"Male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateCandidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateCandidate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:34:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully updated candidate data for candidate_id: 3\"\n}"
+						},
+						{
+							"name": "Update Candidate ID Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"Johan Messi\",\r\n    \"dob\": \"1990-08-05\",\r\n    \"gender\": \"Male\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateCandidate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateCandidate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:34:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Candidate id can't be null or empty.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Vacancy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vacancyId\": 2,\r\n    \"minAge\": 1,\r\n    \"maxAge\": 70\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/updateVacancy",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"updateVacancy"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Vacancy Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vacancyId\": 2,\r\n    \"vacancyName\": \"Mobile Apps Development Manager\",\r\n    \"minAge\": 17,\r\n    \"maxAge\": 35,\r\n    \"requirementGender\": \"Male\",\r\n    \"expiredDate\": \"2027-06-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateVacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateVacancy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:37:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully updated vacancy data for vacancy_id: 2\"\n}"
+						},
+						{
+							"name": "Update Vacancy ID Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"vacancyName\": \"Mobile Apps Development Manager\",\r\n    \"minAge\": 27,\r\n    \"maxAge\": 35,\r\n    \"requirementGender\": \"Male\",\r\n    \"expiredDate\": \"2027-06-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateVacancy",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateVacancy"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:38:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Vacancy id can't be null or empty.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Candidate Apply",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"applyId\": 2,\r\n    \"candidateId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/updateCandidateApply",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"updateCandidateApply"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Candidate Apply Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"applyId\": 2,\r\n    \"candidateId\": 7,\r\n    \"vacancyId\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateCandidateApply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateCandidateApply"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:41:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully updated candidate apply data for apply_id: 2\"\n}"
+						},
+						{
+							"name": "Update Candidate Apply ID Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"candidateId\": 7,\r\n    \"vacancyId\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/updateCandidateApply",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"updateCandidateApply"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:42:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Apply id can't be null or empty.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/jobseeker-api/deleteData?collection=user&id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobseeker-api",
+								"deleteData"
+							],
+							"query": [
+								{
+									"key": "collection",
+									"value": "user"
+								},
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Data Candidate Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteData?collection=candidate&id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteData"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:43:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully deleted from candidate with candidate_id: 1\"\n}"
+						},
+						{
+							"name": "Delete Data Vacancy Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteData?collection=vacancy&id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteData"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "vacancy"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:44:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully deleted from vacancy with vacancy_id: 1\"\n}"
+						},
+						{
+							"name": "Delete Data Candidate Apply Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteData?collection=candidate_apply&id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteData"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate_apply"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:44:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully deleted from candidate apply with apply_id: 1\"\n}"
+						},
+						{
+							"name": "Delete Data ID Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteData?collection=candidate_apply&id=100",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteData"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "candidate_apply"
+										},
+										{
+											"key": "id",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:45:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"message\": \"Failed to delete from candidate apply with apply_id: 100\"\n}"
+						},
+						{
+							"name": "Delete Data Unknown Collection",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXk3NzciLCJpYXQiOjE3MTI4OTE1NTAsImV4cCI6MTcxMjk3Nzk1MH0.mEMl5QItZbQatlkkqIVMdMGrLRd1ZAvlbnq2lExzC0o",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/jobseeker-api/deleteData?collection=user&id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"jobseeker-api",
+										"deleteData"
+									],
+									"query": [
+										{
+											"key": "collection",
+											"value": "user"
+										},
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 12 Apr 2024 04:46:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

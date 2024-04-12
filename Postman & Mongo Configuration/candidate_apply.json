@@ -1,0 +1,14 @@
+{
+    "database": "my_database",
+    "collection": "candidate_apply",
+    "indexes": [
+      {
+        "name": "apply_id_1",
+        "key": {
+            "apply_id": 1
+        },
+        "unique": true,
+        "sparse": true
+      }
+    ]
+}

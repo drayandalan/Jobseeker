@@ -1,0 +1,24 @@
+{
+    "database": "my_database",
+    "collection": "candidate",
+    "indexes": [
+      {
+        "name": "full_name_1_dob_1_gender_1",
+        "key": {
+          "full_name": 1,
+          "dob": 1,
+          "gender": 1
+        },
+        "unique": true,
+        "sparse": true
+      },
+      {
+        "name": "candidate_id_1",
+        "key": {
+            "candidate_id": 1
+        },
+        "unique": true,
+        "sparse": true
+      }
+    ]
+}
